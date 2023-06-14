@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(95, 159, 219);
+    color: white;
+    font: normal 1em Arial;
+    text-align: center;
+}
+
+section {
+    width: 500px;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    color: black;
+    padding: 15px;
+}
+
+#form div {
+    padding: 5px;
+    text-align: left;
+}
+
