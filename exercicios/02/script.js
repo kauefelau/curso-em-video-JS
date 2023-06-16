@@ -1,7 +1,10 @@
 function resultado() {
-    var anoN = document.getElementById('ano')
-    anoN = Number(anoN)
-    var msg = document.getElementById('msg')
-    var idade = 2023 - anoN
-    msg.innerHTML = idade
+    let nasc = parseInt(document.getElementById('ano').value);
+    let msg = document.getElementById('msg')
+    let data = new Date()
+    let anoA = data.getFullYear() 
+    let idade = anoA - nasc
+    if (nasc.value.length == 0 || nasc.value > ano) {
+        window.alert('verifique os dados e tente novamente')
+    }
 }
