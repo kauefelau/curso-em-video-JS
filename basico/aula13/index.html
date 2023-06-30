@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolo</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: cornsilk;
+        }
+
+        #msg {
+            color: chocolate;
+            font-size: 3em;
+        }
+
+        button#bt1 {
+            background-color: rgb(206, 179, 138);
+            display: block;
+            margin: 50px auto 0;
+            width: 300px;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: rgb(206, 179, 138);
+            display: block;
+            margin: auto;
+            width: 300px;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+            color: whitesmoke;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="msg">
+        eu tenho um bolo com 8 fatias
+    </div>
+
+    <button id="bt1" onclick="comerFatia()">comer fatia</button>
+    <button id="bt1" onclick="comerTudo()">Comer todas as fatias</button>
+
+    <script>
+        let msg = document.querySelector('div#msg')
+
+        let numFatias = 8
+
+        function comerFatia() {
+            numFatias -= 1
+            if (numFatias <= 0) {
+                msg.innerHTML = 'desculpe, as fatias acabaram'
+            } else {
+                msg.innerHTML = 'eu tenho um bolo com ' + numFatias + ' fatias'
+            }
+            return numFatias 
+        }
+        function comerTudo() {
+            while(numFatias <= 8 && numFatias > 0){
+                numFatias -= 1
+                msg.innerHTML = 'Voce comeu todas as fatias seu guloso, sobraram um total de '+numFatias+' fatias'
+            }
+        }
+    </script>
+</body>
+
+</html>
